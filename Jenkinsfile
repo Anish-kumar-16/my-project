@@ -3,6 +3,9 @@ pipeline{
 
   stages{
     stage('Build'){
+      tools{
+        maven 'Maven-3'
+      }
       steps{
         sh 'mvn clean package -DskipTests'
       }
